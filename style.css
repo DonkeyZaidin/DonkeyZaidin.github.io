@@ -1,34 +1,78 @@
 @font-face {
-    font-family: Jumpman;
+    font-family: 'Jumpman';
     src: url(./jumpman.ttf);
 }
 
 :root {
-    --color: #444;
-    --white: #fff;
+    --color-principal: #444;
+    --color-fondo: #fff;
+    --color-header: rgba(0, 0, 0, 0.6);
 }
 
 * {
-    font-family: Jumpman;
-    color: var(--color);
-    font-weight: 100;
+    font-family: 'Jumpman', sans-serif;
+    color: var(--color-principal);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+    background-color: var(--color-fondo);
+    line-height: 1.6;
 }
 
+/* Header */
 header {
     background: url(./images/header.jpg) center center no-repeat;
     background-size: cover;
     width: 100%;
     height: 500px;
+    position: relative;
 }
 
 header h1 {
-    color: #000;
+    color: var(--color-fondo);
     font-size: 50px;
     position: absolute;
     right: 40px;
     top: 20px;
+    text-shadow: 2px 2px 5px var(--color-header);
+}
+
+header .subtitulo {
+    position: absolute;
+    right: 40px;
+    top: 90px;
+    color: var(--color-fondo);
+    font-size: 20px;
+    text-shadow: 1px 1px 3px var(--color-header);
+}
+
+/* Secciones */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    border-bottom: 2px solid var(--color-principal);
+    padding-bottom: 5px;
+}
+
+section p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    text-align: center;
+    padding: 20px 0;
 }
